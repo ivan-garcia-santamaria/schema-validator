@@ -1,0 +1,751 @@
+{
+   "definitions": {},
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "$id": "http://example.com/root.json",
+   "type": "object",
+   "title": "The Root Schema",
+   "properties": {
+     "data": {
+       "$id": "#/properties/data",
+       "type": "object",
+       "title": "The Data Schema",
+       "properties": {
+         "attributes": {
+           "$id": "#/properties/data/properties/attributes",
+           "type": "object",
+           "title": "The Attributes Schema",
+           "properties": {
+             "billing-permissions": {
+               "$id": "#/properties/data/properties/attributes/properties/billing-permissions",
+               "type": "object",
+               "title": "The Billing-permissions Schema"
+             },
+             "debt-collection-permissions": {
+               "$id": "#/properties/data/properties/attributes/properties/debt-collection-permissions",
+               "type": "object",
+               "title": "The Debt-collection-permissions Schema"
+             },
+             "name": {
+               "$id": "#/properties/data/properties/attributes/properties/name",
+               "type": "string",
+               "title": "The Name Schema",
+               "default": "",
+               "examples": [
+                 "default"
+               ],
+               "pattern": "^(.*)$"
+             },
+             "account-type": {
+               "$id": "#/properties/data/properties/attributes/properties/account-type",
+               "type": "string",
+               "title": "The Account-type Schema",
+               "default": "",
+               "examples": [
+                 ""
+               ],
+               "pattern": "^(.*)$"
+             },
+             "account-id": {
+               "$id": "#/properties/data/properties/attributes/properties/account-id",
+               "type": "string",
+               "title": "The Account-id Schema",
+               "default": "",
+               "examples": [
+                 "36807"
+               ],
+               "pattern": "^(.*)$"
+             },
+             "lifecycle-status": {
+               "$id": "#/properties/data/properties/attributes/properties/lifecycle-status",
+               "type": "string",
+               "title": "The Lifecycle-status Schema",
+               "default": "",
+               "examples": [
+                 "active"
+               ],
+               "pattern": "^(.*)$"
+             },
+             "debt-collection-profile": {
+               "$id": "#/properties/data/properties/attributes/properties/debt-collection-profile",
+               "type": "null",
+               "title": "The Debt-collection-profile Schema",
+               "default": null,
+               "examples": [
+                 null
+               ]
+             },
+             "characteristics": {
+               "$id": "#/properties/data/properties/attributes/properties/characteristics",
+               "type": "object",
+               "title": "The Characteristics Schema"
+             },
+             "valid-for": {
+               "$id": "#/properties/data/properties/attributes/properties/valid-for",
+               "type": "object",
+               "title": "The Valid-for Schema",
+               "properties": {
+                 "end-datetime": {
+                   "$id": "#/properties/data/properties/attributes/properties/valid-for/properties/end-datetime",
+                   "type": "string",
+                   "title": "The End-datetime Schema",
+                   "default": "",
+                   "examples": [
+                     "2049-12-31T23:00:00.000Z"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "start-datetime": {
+                   "$id": "#/properties/data/properties/attributes/properties/valid-for/properties/start-datetime",
+                   "type": "string",
+                   "title": "The Start-datetime Schema",
+                   "default": "",
+                   "examples": [
+                     "2018-10-09T22:00:00.000Z"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "meta": {
+                   "$id": "#/properties/data/properties/attributes/properties/valid-for/properties/meta",
+                   "type": "object",
+                   "title": "The Meta Schema",
+                   "properties": {
+                     "type": {
+                       "$id": "#/properties/data/properties/attributes/properties/valid-for/properties/meta/properties/type",
+                       "type": "string",
+                       "title": "The Type Schema",
+                       "default": "",
+                       "examples": [
+                         "valid-for-datetime"
+                       ],
+                       "pattern": "^(.*)$"
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         },
+         "relationships": {
+           "$id": "#/properties/data/properties/relationships",
+           "type": "object",
+           "title": "The Relationships Schema",
+           "properties": {
+             "billing-accounts": {
+               "$id": "#/properties/data/properties/relationships/properties/billing-accounts",
+               "type": "object",
+               "title": "The Billing-accounts Schema",
+               "properties": {
+                 "data": {
+                   "$id": "#/properties/data/properties/relationships/properties/billing-accounts/properties/data",
+                   "type": "array",
+                   "title": "The Data Schema",
+                   "items": {
+                     "$id": "#/properties/data/properties/relationships/properties/billing-accounts/properties/data/items",
+                     "type": "object",
+                     "title": "The Items Schema",
+                     "properties": {
+                       "type": {
+                         "$id": "#/properties/data/properties/relationships/properties/billing-accounts/properties/data/items/properties/type",
+                         "type": "string",
+                         "title": "The Type Schema",
+                         "default": "",
+                         "examples": [
+                           "billing-accounts"
+                         ],
+                         "pattern": "^(.*)$"
+                       },
+                       "id": {
+                         "$id": "#/properties/data/properties/relationships/properties/billing-accounts/properties/data/items/properties/id",
+                         "type": "string",
+                         "title": "The Id Schema",
+                         "default": "",
+                         "examples": [
+                           "8020672"
+                         ],
+                         "pattern": "^(.*)$"
+                       }
+                     }
+                   }
+                 }
+               }
+             },
+             "associated-billing-accounts": {
+               "$id": "#/properties/data/properties/relationships/properties/associated-billing-accounts",
+               "type": "object",
+               "title": "The Associated-billing-accounts Schema"
+             },
+             "external-references": {
+               "$id": "#/properties/data/properties/relationships/properties/external-references",
+               "type": "object",
+               "title": "The External-references Schema"
+             },
+             "payment-methods": {
+               "$id": "#/properties/data/properties/relationships/properties/payment-methods",
+               "type": "object",
+               "title": "The Payment-methods Schema"
+             },
+             "customer-segments": {
+               "$id": "#/properties/data/properties/relationships/properties/customer-segments",
+               "type": "object",
+               "title": "The Customer-segments Schema",
+               "properties": {
+                 "data": {
+                   "$id": "#/properties/data/properties/relationships/properties/customer-segments/properties/data",
+                   "type": "array",
+                   "title": "The Data Schema",
+                   "items": {
+                     "$id": "#/properties/data/properties/relationships/properties/customer-segments/properties/data/items",
+                     "type": "object",
+                     "title": "The Items Schema",
+                     "properties": {
+                       "type": {
+                         "$id": "#/properties/data/properties/relationships/properties/customer-segments/properties/data/items/properties/type",
+                         "type": "string",
+                         "title": "The Type Schema",
+                         "default": "",
+                         "examples": [
+                           "customer-segments"
+                         ],
+                         "pattern": "^(.*)$"
+                       },
+                       "id": {
+                         "$id": "#/properties/data/properties/relationships/properties/customer-segments/properties/data/items/properties/id",
+                         "type": "string",
+                         "title": "The Id Schema",
+                         "default": "",
+                         "examples": [
+                           ""
+                         ],
+                         "pattern": "^(.*)$"
+                       }
+                     }
+                   }
+                 }
+               }
+             },
+             "orders": {
+               "$id": "#/properties/data/properties/relationships/properties/orders",
+               "type": "object",
+               "title": "The Orders Schema",
+               "properties": {
+                 "data": {
+                   "$id": "#/properties/data/properties/relationships/properties/orders/properties/data",
+                   "type": "array",
+                   "title": "The Data Schema",
+                   "items": {
+                     "$id": "#/properties/data/properties/relationships/properties/orders/properties/data/items",
+                     "type": "object",
+                     "title": "The Items Schema",
+                     "properties": {
+                       "type": {
+                         "$id": "#/properties/data/properties/relationships/properties/orders/properties/data/items/properties/type",
+                         "type": "string",
+                         "title": "The Type Schema",
+                         "default": "",
+                         "examples": [
+                           "orders"
+                         ],
+                         "pattern": "^(.*)$"
+                       },
+                       "id": {
+                         "$id": "#/properties/data/properties/relationships/properties/orders/properties/data/items/properties/id",
+                         "type": "string",
+                         "title": "The Id Schema",
+                         "default": "",
+                         "examples": [
+                           "80066643"
+                         ],
+                         "pattern": "^(.*)$"
+                       }
+                     }
+                   }
+                 }
+               }
+             },
+             "related-parties": {
+               "$id": "#/properties/data/properties/relationships/properties/related-parties",
+               "type": "object",
+               "title": "The Related-parties Schema",
+               "properties": {
+                 "data": {
+                   "$id": "#/properties/data/properties/relationships/properties/related-parties/properties/data",
+                   "type": "array",
+                   "title": "The Data Schema",
+                   "items": {
+                     "$id": "#/properties/data/properties/relationships/properties/related-parties/properties/data/items",
+                     "type": "object",
+                     "title": "The Items Schema",
+                     "properties": {
+                       "type": {
+                         "$id": "#/properties/data/properties/relationships/properties/related-parties/properties/data/items/properties/type",
+                         "type": "string",
+                         "title": "The Type Schema",
+                         "default": "",
+                         "examples": [
+                           "party-relationships"
+                         ],
+                         "pattern": "^(.*)$"
+                       },
+                       "id": {
+                         "$id": "#/properties/data/properties/relationships/properties/related-parties/properties/data/items/properties/id",
+                         "type": "string",
+                         "title": "The Id Schema",
+                         "default": "",
+                         "examples": [
+                           "1"
+                         ],
+                         "pattern": "^(.*)$"
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         },
+         "id": {
+           "$id": "#/properties/data/properties/id",
+           "type": "string",
+           "title": "The Id Schema",
+           "default": "",
+           "examples": [
+             "36807"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "meta": {
+           "$id": "#/properties/data/properties/meta",
+           "type": "object",
+           "title": "The Meta Schema"
+         },
+         "type": {
+           "$id": "#/properties/data/properties/type",
+           "type": "string",
+           "title": "The Type Schema",
+           "default": "",
+           "examples": [
+             "customer-accounts"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "included": {
+       "$id": "#/properties/included",
+       "type": "array",
+       "title": "The Included Schema",
+       "items": {
+         "$id": "#/properties/included/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "properties": {
+           "attributes": {
+             "$id": "#/properties/included/items/properties/attributes",
+             "type": "object",
+             "title": "The Attributes Schema",
+             "properties": {
+               "given-name": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/given-name",
+                 "type": "string",
+                 "title": "The Given-name Schema",
+                 "default": "",
+                 "examples": [
+                   "Bruce"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "date-of-birth": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/date-of-birth",
+                 "type": "string",
+                 "title": "The Date-of-birth Schema",
+                 "default": "",
+                 "examples": [
+                   "1990-08-08"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "marital-status": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/marital-status",
+                 "type": "null",
+                 "title": "The Marital-status Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "additional-name": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/additional-name",
+                 "type": "string",
+                 "title": "The Additional-name Schema",
+                 "default": "",
+                 "examples": [
+                   "Sanchez"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "preferred-name": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/preferred-name",
+                 "type": "null",
+                 "title": "The Preferred-name Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "honorific-prefix": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/honorific-prefix",
+                 "type": "string",
+                 "title": "The Honorific-prefix Schema",
+                 "default": "",
+                 "examples": [
+                   "Sr."
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "formatted-name": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/formatted-name",
+                 "type": "string",
+                 "title": "The Formatted-name Schema",
+                 "default": "",
+                 "examples": [
+                   "Bruce Wayne Sanchez"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "honorific-suffix": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/honorific-suffix",
+                 "type": "null",
+                 "title": "The Honorific-suffix Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "characteristics": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/characteristics",
+                 "type": "object",
+                 "title": "The Characteristics Schema"
+               },
+               "place-of-birth": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/place-of-birth",
+                 "type": "null",
+                 "title": "The Place-of-birth Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "language": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/language",
+                 "type": "string",
+                 "title": "The Language Schema",
+                 "default": "",
+                 "examples": [
+                   "spa"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "nationality": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/nationality",
+                 "type": "string",
+                 "title": "The Nationality Schema",
+                 "default": "",
+                 "examples": [
+                   "ES"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "date-of-death": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/date-of-death",
+                 "type": "null",
+                 "title": "The Date-of-death Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "privacy-settings": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings",
+                 "type": "object",
+                 "title": "The Privacy-settings Schema",
+                 "properties": {
+                   "markEmail": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markEmail",
+                     "type": "boolean",
+                     "title": "The Markemail Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markBank3rd": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markBank3rd",
+                     "type": "boolean",
+                     "title": "The Markbank3rd Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markPost": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markPost",
+                     "type": "boolean",
+                     "title": "The Markpost Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markEmail3rd": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markEmail3rd",
+                     "type": "boolean",
+                     "title": "The Markemail3rd Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markDontSharePersonalData": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markDontSharePersonalData",
+                     "type": "boolean",
+                     "title": "The Markdontsharepersonaldata Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markSms3rd": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markSms3rd",
+                     "type": "boolean",
+                     "title": "The Marksms3rd Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markPost3rd": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markPost3rd",
+                     "type": "boolean",
+                     "title": "The Markpost3rd Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   },
+                   "markSms": {
+                     "$id": "#/properties/included/items/properties/attributes/properties/privacy-settings/properties/markSms",
+                     "type": "boolean",
+                     "title": "The Marksms Schema",
+                     "default": false,
+                     "examples": [
+                       false
+                     ]
+                   }
+                 }
+               },
+               "family-name": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/family-name",
+                 "type": "string",
+                 "title": "The Family-name Schema",
+                 "default": "",
+                 "examples": [
+                   "Wayne"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "country-of-birth": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/country-of-birth",
+                 "type": "null",
+                 "title": "The Country-of-birth Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "gender": {
+                 "$id": "#/properties/included/items/properties/attributes/properties/gender",
+                 "type": "null",
+                 "title": "The Gender Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               }
+             }
+           },
+           "relationships": {
+             "$id": "#/properties/included/items/properties/relationships",
+             "type": "object",
+             "title": "The Relationships Schema",
+             "properties": {
+               "contact-media": {
+                 "$id": "#/properties/included/items/properties/relationships/properties/contact-media",
+                 "type": "object",
+                 "title": "The Contact-media Schema",
+                 "properties": {
+                   "data": {
+                     "$id": "#/properties/included/items/properties/relationships/properties/contact-media/properties/data",
+                     "type": "array",
+                     "title": "The Data Schema",
+                     "items": {
+                       "$id": "#/properties/included/items/properties/relationships/properties/contact-media/properties/data/items",
+                       "type": "object",
+                       "title": "The Items Schema",
+                       "properties": {
+                         "type": {
+                           "$id": "#/properties/included/items/properties/relationships/properties/contact-media/properties/data/items/properties/type",
+                           "type": "string",
+                           "title": "The Type Schema",
+                           "default": "",
+                           "examples": [
+                             "contact-media"
+                           ],
+                           "pattern": "^(.*)$"
+                         },
+                         "id": {
+                           "$id": "#/properties/included/items/properties/relationships/properties/contact-media/properties/data/items/properties/id",
+                           "type": "string",
+                           "title": "The Id Schema",
+                           "default": "",
+                           "examples": [
+                             "1"
+                           ],
+                           "pattern": "^(.*)$"
+                         }
+                       }
+                     }
+                   }
+                 }
+               },
+               "external-references": {
+                 "$id": "#/properties/included/items/properties/relationships/properties/external-references",
+                 "type": "object",
+                 "title": "The External-references Schema"
+               },
+               "identifications": {
+                 "$id": "#/properties/included/items/properties/relationships/properties/identifications",
+                 "type": "object",
+                 "title": "The Identifications Schema",
+                 "properties": {
+                   "data": {
+                     "$id": "#/properties/included/items/properties/relationships/properties/identifications/properties/data",
+                     "type": "array",
+                     "title": "The Data Schema",
+                     "items": {
+                       "$id": "#/properties/included/items/properties/relationships/properties/identifications/properties/data/items",
+                       "type": "object",
+                       "title": "The Items Schema",
+                       "properties": {
+                         "type": {
+                           "$id": "#/properties/included/items/properties/relationships/properties/identifications/properties/data/items/properties/type",
+                           "type": "string",
+                           "title": "The Type Schema",
+                           "default": "",
+                           "examples": [
+                             "identifications"
+                           ],
+                           "pattern": "^(.*)$"
+                         },
+                         "id": {
+                           "$id": "#/properties/included/items/properties/relationships/properties/identifications/properties/data/items/properties/id",
+                           "type": "string",
+                           "title": "The Id Schema",
+                           "default": "",
+                           "examples": [
+                             "1"
+                           ],
+                           "pattern": "^(.*)$"
+                         }
+                       }
+                     }
+                   }
+                 }
+               },
+               "related-parties": {
+                 "$id": "#/properties/included/items/properties/relationships/properties/related-parties",
+                 "type": "object",
+                 "title": "The Related-parties Schema",
+                 "properties": {
+                   "data": {
+                     "$id": "#/properties/included/items/properties/relationships/properties/related-parties/properties/data",
+                     "type": "array",
+                     "title": "The Data Schema",
+                     "items": {
+                       "$id": "#/properties/included/items/properties/relationships/properties/related-parties/properties/data/items",
+                       "type": "object",
+                       "title": "The Items Schema",
+                       "properties": {
+                         "type": {
+                           "$id": "#/properties/included/items/properties/relationships/properties/related-parties/properties/data/items/properties/type",
+                           "type": "string",
+                           "title": "The Type Schema",
+                           "default": "",
+                           "examples": [
+                             "party-relationships"
+                           ],
+                           "pattern": "^(.*)$"
+                         },
+                         "id": {
+                           "$id": "#/properties/included/items/properties/relationships/properties/related-parties/properties/data/items/properties/id",
+                           "type": "string",
+                           "title": "The Id Schema",
+                           "default": "",
+                           "examples": [
+                             "1"
+                           ],
+                           "pattern": "^(.*)$"
+                         }
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "id": {
+             "$id": "#/properties/included/items/properties/id",
+             "type": "string",
+             "title": "The Id Schema",
+             "default": "",
+             "examples": [
+               "5538741"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "meta": {
+             "$id": "#/properties/included/items/properties/meta",
+             "type": "object",
+             "title": "The Meta Schema"
+           },
+           "type": {
+             "$id": "#/properties/included/items/properties/type",
+             "type": "string",
+             "title": "The Type Schema",
+             "default": "",
+             "examples": [
+               "individuals"
+             ],
+             "pattern": "^(.*)$"
+           }
+         }
+       }
+     },
+     "links": {
+       "$id": "#/properties/links",
+       "type": "object",
+       "title": "The Links Schema",
+       "properties": {
+         "self": {
+           "$id": "#/properties/links/properties/self",
+           "type": "string",
+           "title": "The Self Schema",
+           "default": "",
+           "examples": [
+             "/customers/36807"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     }
+   }
+ }
