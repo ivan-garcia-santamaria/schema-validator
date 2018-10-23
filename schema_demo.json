@@ -10,6 +10,7 @@
 		},
 		"Rectangle" : {
 			"type" : "object",
+			"required": ["a"],
 			"properties" : {
 				"a" : {"$ref" : "#/definitions/size"},
 				"b" : {"$ref" : "#/definitions/size"}
