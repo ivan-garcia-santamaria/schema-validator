@@ -6,7 +6,7 @@
 	"definitions" : {
 		"size" : {
 			"type" : "number",
-			"minimum" : 0
+			"minimum" : -1
 		},
 		"Rectangle" : {
 			"type" : "object",
